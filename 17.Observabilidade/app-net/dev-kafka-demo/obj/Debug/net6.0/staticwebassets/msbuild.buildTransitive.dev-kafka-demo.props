@@ -1,3 +1,0 @@
-﻿<Project>
-  <Import Project="..\buildMultiTargeting\dev-kafka-demo.props" />
-</Project>
