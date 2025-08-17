@@ -47,7 +47,7 @@ Após a criação vamos subir os serviços do docker compose... Lembram!?!!?!?
 
 
 ```bash
-docker-compose up -d postgres  pgadmin 
+docker compose up -d postgres  pgadmin 
 
 docker container ls
 

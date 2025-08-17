@@ -11,8 +11,7 @@
 ### Subindo o ambiente do Kafka
 
 ```bash
-docker-compose up -d zookeeper kafka-broker
-
+docker compose up -d zookeeper kafka-broker
 ```
 
 ### Vamos configurar nosso cluster de Kafka Connect ??
@@ -28,7 +27,7 @@ cd ..
 
 
 ```bash
-docker-compose up -d akhq connect
+docker compose up -d akhq connect
 ```
 
 

@@ -13,7 +13,7 @@
 
 
 ```bash
-docker-compose up -d namenode datanode metastore
+docker compose up -d namenode datanode metastore
 ``` 
 
 ## Verificando o namenode entrou em modo de segurança
@@ -40,13 +40,13 @@ exit
 # Subindo o Hive
 
 ```bash
-docker-compose up -d hive
+docker compose up -d hive
 ```
 
 # Subindo o Presto
 
 ```bash
-docker-compose up -d presto
+docker compose up -d presto
 ```
 
 

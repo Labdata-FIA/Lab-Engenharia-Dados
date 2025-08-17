@@ -17,9 +17,9 @@
 
 ```bash
 
-docker-compose up -d  ksqldb-server ksqldb-cli 
+docker compose up -d  ksqldb-server ksqldb-cli 
 
-docker-compose exec ksqldb-cli ksql http://ksqldb-server:8088
+docker compose exec ksqldb-cli ksql http://ksqldb-server:8088
 
 SET 'auto.offset.reset'='earliest';
    

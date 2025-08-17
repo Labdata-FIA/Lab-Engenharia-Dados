@@ -33,7 +33,7 @@ kafka-console-producer --bootstrap-server localhost:9092 --topic carrinho
 ### Subindo o ambiente do MinIO
 
 ```bash
-docker-compose up -d  minio
+docker compose up -d  minio
 ```
 
 ### Configurando MinIO

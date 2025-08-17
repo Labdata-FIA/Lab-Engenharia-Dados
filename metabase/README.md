@@ -11,7 +11,7 @@
 
 ## Subindo o Metabase
 ```bash
-docker-compose up -d metabase
+docker compose up -d metabase
 ```
 
 ### Abrir o Metabase
