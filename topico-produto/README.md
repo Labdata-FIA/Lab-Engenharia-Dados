@@ -39,7 +39,7 @@ No arquivo `conectores/conector-postgres-produto.json` ajuste o atributo `table.
 ```bash
 
 //Linux
-http PUT http://localhost:8083/connectors/connector-postgres-produtos/config < conectores/conector-postgres-produto.json
+curl -X PUT -H "Content-Type: application/json" -d @conectores/conector-postgres-produto.json http://localhost:8083/connectors/connector-postgres-produtos/config
 	
 //Ou via powershell
 $response = Invoke-WebRequest -Uri "http://localhost:8083/connectors/connector-postgres-produtos/config" -Method Put -Body (Get-Content -Path "conectores/conector-postgres-produto.json" -Raw) -ContentType "application/json"; $response.Content

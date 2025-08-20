@@ -70,8 +70,7 @@ Instalando o conector do MinIO
 Criando o conector `conector-minio-carrinho.json`
 
 ```bash
-http PUT http://localhost:8083/connectors/conector-minio-carrinho/config < conectores/conector-minio-carrinho.json
-
+curl -X PUT -H "Content-Type: application/json" -d @conectores/conector-minio-carrinho.json http://localhost:8083/connectors/conector-minio-carrinho/config
 
 //Ou via powershell
 $response = Invoke-WebRequest -Uri "http://localhost:8083/connectors/conector-minio-carrinho/config" -Method Put -Body (Get-Content -Path "conectores/conector-minio-carrinho.json" -Raw) -ContentType "application/json"; $response.Content

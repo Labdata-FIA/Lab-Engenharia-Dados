@@ -22,7 +22,7 @@ No arquivo `conector-postgres.json` onde está o conector verifique os dados de 
 
 //Linux
 
-http PUT http://localhost:8083/connectors/connector-postgres/config < conectores/conector-postgres.json
+curl -X PUT -H "Content-Type: application/json" -d @conectores/conector-postgres.json http://localhost:8083/connectors/connector-postgres/config
 
 //Ou via powershell
 $response = Invoke-WebRequest -Uri "http://localhost:8083/connectors/connector-postgres/config" -Method Put -Body (Get-Content -Path "conectores/conector-postgres.json" -Raw) -ContentType "application/json"; $response.Content

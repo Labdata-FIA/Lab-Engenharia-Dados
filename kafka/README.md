@@ -18,7 +18,7 @@ docker compose up -d zookeeper kafka-broker
 
 ```bash
 cd kafka
-docker image build -t <<usuario>>/kafka-connet-lab:v1  -f Dockerfile .
+docker image build -t <<usuario>>/kafka-connet-lab:v1 -f Dockerfile .
 cd ..
 ```
 
@@ -34,7 +34,7 @@ docker compose up -d akhq connect
 Listando os plugins existentes, os padrões da imagem e do debezium que foram inseridos na imagem, via arquivo `Dockerfile`
 
 ```bash
-docker exec -it kafkaConect curl  http://localhost:8083/connector-plugins
+docker exec -it kafkaConect curl http://localhost:8083/connector-plugins
 ```
 
 ### Até aqui está tudo certinho??
