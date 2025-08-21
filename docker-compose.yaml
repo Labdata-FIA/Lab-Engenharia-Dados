@@ -158,6 +158,10 @@ services:
       resources:
         limits:
           memory: 500m
+    ulimits:
+      nofile:
+        soft: 65536
+        hard: 65536
     networks:
        otel:
     #Se entrar em mode de segurança, acessar a vm e rodar o "hdfs dfsadmin -safemode leave" e depois "hdfs fsck -delete" 
@@ -182,6 +186,10 @@ services:
       resources:
         limits:
           memory: 500m
+    ulimits:
+      nofile:
+        soft: 65536
+        hard: 65536
     networks:
        otel:
 
