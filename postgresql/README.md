@@ -29,6 +29,7 @@ Nesse arquivo crie a estrutura da tabela `carrinhos` contendo os seguintes campo
 
 
 ```bash
+sudo -s
 
 chmod 777 ./postgresql
 chmod 777 ./postgresql/volume

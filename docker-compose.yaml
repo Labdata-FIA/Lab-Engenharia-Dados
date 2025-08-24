@@ -367,7 +367,7 @@ services:
 ############################
 
   nifi:
-      image: apache/nifi:latest
+      image: apache/nifi:${NIFI_VERSION}
       container_name: nifi
       hostname: nifi
       volumes:
@@ -380,10 +380,13 @@ services:
         # - ./nifi/conf:/opt/nifi/nifi-current/conf
         # - ./nifi/log:/opt/nifi/nifi-current/logs
         # - ./util:/util
+      ports:
+      - 9443:9443
       environment:
-        NIFI_WEB_HTTP_PORT: "9090"
-        NIFI_WEB_HTTPS_HOST: "nifi"
-        TZ: "America/Sao_Paulo"
+         NIFI_WEB_HTTPS_PORT: "9443"
+         SINGLE_USER_CREDENTIALS_USERNAME: admin
+         SINGLE_USER_CREDENTIALS_PASSWORD: fia@2024@ladata@laboratorio
+         TZ: "America/Sao_Paulo"
       command: >
         sh -c "ln -snf /usr/share/zoneinfo/$$TZ /etc/localtime && echo $$TZ > /etc/timezone"
       

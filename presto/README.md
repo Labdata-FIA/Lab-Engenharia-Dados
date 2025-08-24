@@ -11,6 +11,13 @@
 
 # Subindo o Hadoop
 
+> [!IMPORTANT]
+> Se precisar parar alguns containers
+
+```bash
+ docker stop zookeeper kafka-broker akhq connect ksqldb-server ksqldb-cli api
+ ``` 
+
 
 ```bash
 docker compose up -d namenode datanode metastore
