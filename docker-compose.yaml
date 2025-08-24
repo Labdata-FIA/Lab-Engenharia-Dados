@@ -366,38 +366,23 @@ services:
 ## INGESTAO
 ############################
 
-  nifi:
-      image: apache/nifi:${NIFI_VERSION}
-      container_name: nifi
-      hostname: nifi
-      volumes:
-        - ./nifi/util:/util
-        # - ./nifi/database_repository:/opt/nifi/nifi-current/database_repository
-        # - ./nifi/flowfile_repository:/opt/nifi/nifi-current/flowfile_repository
-        # - ./nifi/content_repository:/opt/nifi/nifi-current/content_repository
-        # - ./nifi/provenance_repository:/opt/nifi/nifi-current/provenance_repository
-        # - ./nifi/state:/opt/nifi/nifi-current/state
-        # - ./nifi/conf:/opt/nifi/nifi-current/conf
-        # - ./nifi/log:/opt/nifi/nifi-current/logs
-        # - ./util:/util
-      ports:
+    nifi:
+    image: apache/nifi:${NIFI_VERSION}
+    container_name: nifi-n
+    hostname: nifi-n
+    volumes:
+      - ./19.Data-Flow-Nifi/files:/files
+      - ./postgresql/postgresql-42.5.1.jar:/util/postgresql-42.5.1.jar
+    environment:
+      NIFI_WEB_HTTPS_PORT: "9443"
+      SINGLE_USER_CREDENTIALS_USERNAME: admin
+      SINGLE_USER_CREDENTIALS_PASSWORD: fia@2024@ladata@laboratorio
+      TZ: "America/Sao_Paulo"
+    depends_on:
+      - kafka-broker
+    ports:
       - 9443:9443
-      environment:
-         NIFI_WEB_HTTPS_PORT: "9443"
-         SINGLE_USER_CREDENTIALS_USERNAME: admin
-         SINGLE_USER_CREDENTIALS_PASSWORD: fia@2024@ladata@laboratorio
-         TZ: "America/Sao_Paulo"
-      command: >
-        sh -c "ln -snf /usr/share/zoneinfo/$$TZ /etc/localtime && echo $$TZ > /etc/timezone"
-      
-      ports:
-        - 49090:9090
-      deploy:
-        resources:
-          limits:
-            memory: 2g
-            #cpus: '0.2'
-      networks:
+    networks:
         otel:
 
 
