@@ -366,7 +366,7 @@ services:
 ## INGESTAO
 ############################
 
-    nifi:
+  nifi:
     image: apache/nifi:${NIFI_VERSION}
     container_name: nifi-n
     hostname: nifi-n
