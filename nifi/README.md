@@ -27,10 +27,6 @@ docker compose up -d nifi
 |admin|fia@2024@ladata@laboratorio|
 
 
-
-### Tela inicial
-![Lab](../content/nifi_1.png)
-
 ### Criando grupo - Exemplo_aula
 Process Group 
 ![Lab](../content/nifi_2.png)
