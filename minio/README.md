@@ -32,6 +32,11 @@ kafka-console-producer --bootstrap-server localhost:9092 --topic carrinho
 
 ### Subindo o ambiente do MinIO
 
+> [!IMPORTANT]
+> Ante de subir o Minio pelo docker compose precisa estar na pasta Lab-Engenharia-Dados
+
+
+
 ```bash
 docker compose up -d  minio
 ```
