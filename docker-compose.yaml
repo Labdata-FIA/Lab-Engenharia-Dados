@@ -370,9 +370,8 @@ services:
     image: apache/nifi:${NIFI_VERSION}
     container_name: nifi-n
     hostname: nifi-n
-    volumes:
-      - ./19.Data-Flow-Nifi/files:/files
-      - ./postgresql/postgresql-42.5.1.jar:/util/postgresql-42.5.1.jar
+    volumes:      
+      - ./nifi/util:/util
     environment:
       NIFI_WEB_HTTPS_PORT: "9443"
       SINGLE_USER_CREDENTIALS_USERNAME: admin

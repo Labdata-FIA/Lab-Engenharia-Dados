@@ -62,6 +62,11 @@ Criar fluxo de escrita com o processador - PutS3Object
 * Access Key ID: cursolab
 * Secret Access Key: cursolab
 
+> [!IMPORTANT]
+> Configure o `AWS Credentials Provider Service`
+
+
+
 ![Lab](../content/nifi_6_1.png)
 
 O Fluxo deve ficar igual abaixo 
