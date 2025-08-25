@@ -19,6 +19,13 @@
 docker compose up -d nifi
 ```
 
+> https://localhost:9443/nifi/#/login
+
+
+|Usuário|Senha|
+|------------------|--------------|
+|admin|fia@2024@ladata@laboratorio|
+
 ### Abrir  o NIFI 
 [NIFI](http://localhost:49090/nifi/)
 
