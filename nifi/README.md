@@ -26,8 +26,6 @@ docker compose up -d nifi
 |------------------|--------------|
 |admin|fia@2024@ladata@laboratorio|
 
-### Abrir  o NIFI 
-[NIFI](http://localhost:49090/nifi/)
 
 
 ### Tela inicial
